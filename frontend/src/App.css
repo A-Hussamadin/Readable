@@ -1,12 +1,93 @@
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	background-color: #e9ebee;
+}
+.app-body {
+	margin-top: 100px;
+}
+.breadcrumb {
+	background-color: white;
+}
 ul {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
 }
+
+.main-panel-card {
+	background-color: #ffffff;
+	margin-bottom: 20px;
+}
 .clickable {
 	cursor: pointer;
 }
-body {
-	font-family: verdana, arial, helvetica, sans-serif;
-	background-color: #e9ebee;
+.fa-arrow-down,
+.fa-arrow-up {
+	color: #c6c6c6;
+	font-size: 23px;
+}
+
+.vote-score {
+	color: #c6c6c6;
+	font-weight: bold;
+	font-size: 1erm;
+}
+
+.card-title {
+	color: #0275d8;
+	font-size: large;
+	font-weight: normal;
+	padding: 0px;
+}
+.card-subtitle {
+	font-size: x-small;
+}
+.comment-text {
+	color: #888;
+	font-weight: bold;
+	padding: 0 1px;
+	font-size: x-small;
+}
+
+.comments-panel {
+	margin-top: 30px;
+}
+
+.comment-card {
+	margin-bottom: 20px;
+}
+
+.post-subtitle {
+	font-weight: bold;
+}
+
+.modal-container {
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
+}
+
+.ReactModal__Overlay {
+	z-index: 1000; /* Must be greater than #side-dragbar:z-index */
+}
+
+.ReactModal__Body--open {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.card-form {
+	background-color: #ffffff;
+	width: 50%;
+	height: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
 }

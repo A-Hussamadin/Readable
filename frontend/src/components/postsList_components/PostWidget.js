@@ -4,9 +4,7 @@ import { postVote, deletePost } from '../../actions/posts_actions';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 class PostWidget extends Component {
-	componentDidMount() {
-		//	this.props.postComments(this.props.post.id);
-	}
+	componentDidMount() {}
 
 	handlevoteClick = option => {
 		this.props.postVote(this.props.post.id, option);
@@ -70,8 +68,13 @@ class PostWidget extends Component {
 									</Link>
 									<h6 className="card-subtitle">
 										Submited on
-										<Time value={post.timestamp} format="YYYY/MM/DD" /> by
-										<strong>{post.author}</strong>
+										<span className="mx-2">
+											<Time value={post.timestamp} format="YYYY/MM/DD" />
+										</span>
+										by
+										<span className="ml-2">
+											<strong>{post.author}</strong>
+										</span>
 									</h6>
 
 									<span className="comment-text">{commentsCount} Comments</span>

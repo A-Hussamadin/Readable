@@ -4,10 +4,10 @@ import CategoriesWidget from './sidebar_components/CategoriesWidget';
 const Sidebar = props => {
 	return (
 		<div className="col-md-12">
-			<div className="left-panel-card">
+			<div className="mb-5">
 				<SortingWidget />
 			</div>
-			<div className="left-panel-card">
+			<div className="mb-5">
 				<CategoriesWidget />
 			</div>
 		</div>
