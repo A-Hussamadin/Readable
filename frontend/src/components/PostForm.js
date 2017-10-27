@@ -124,7 +124,6 @@ class PostForm extends Component {
 	}
 
 	render() {
-		console.log(this.props.match);
 		const { handleSubmit } = this.props;
 		return (
 			<div>
