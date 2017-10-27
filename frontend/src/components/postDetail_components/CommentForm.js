@@ -9,10 +9,15 @@ import {
 } from '../../actions/comments_actions';
 import { GenerateUniqueID } from '../../utils/helpers';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 
 class CommentForm extends Component {
+	static propTypes = {
+		parentId: PropTypes.string.isRequired,
+		commentId: PropTypes.string.isRequired,
+		close: PropTypes.func.isRequired
+	};
 	renderField = field => {
-		//console.log(field);
 		const { meta: { touched, error } } = field;
 		const className = `form-group ${touched && error ? 'has-danger' : ''}`;
 		return (

@@ -4,7 +4,6 @@ import { sortPosts } from '../../../actions/posts_actions';
 
 class SortingWidget extends Component {
 	onChange = event => {
-		console.log(event.target.value);
 		if (event.target.value !== undefined);
 		this.props.sortPosts(event.target.value);
 	};

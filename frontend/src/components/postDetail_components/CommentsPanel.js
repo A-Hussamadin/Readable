@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import CommentWidget from './commentsPanel_components/CommentWidget';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+
 class CommentsPanel extends Component {
+	static propTypes = {
+		parentId: PropTypes.string.isRequired,
+		editComment: PropTypes.func.isRequired
+	};
 	renderComments = () => {
 		return this.props.comments.map(comment => {
 			return (

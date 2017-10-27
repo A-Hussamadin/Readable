@@ -3,7 +3,11 @@ import Time from 'react-time';
 import { postVote, deletePost } from '../../actions/posts_actions';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 class PostWidget extends Component {
+	static propTypes = {
+		post: PropTypes.object.isRequired
+	};
 	componentDidMount() {}
 
 	handlevoteClick = option => {

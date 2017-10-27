@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Time from 'react-time';
 import { commentVote, deleteComment } from '../../../actions/comments_actions';
+import PropTypes from 'prop-types';
 
 class CommentWidget extends Component {
+	static propTypes = {
+		comment: PropTypes.object.isRequired,
+		editComment: PropTypes.func.isRequired
+	};
 	handlevoteClick = option => {
 		this.props.commentVote(this.props.comment.id, option);
 	};
