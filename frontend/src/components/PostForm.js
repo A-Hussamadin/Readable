@@ -106,9 +106,6 @@ class PostForm extends Component {
 	};
 	onSubmit(values) {
 		if (this.props.match.params.id) {
-			//call edit function
-			values.id = this.props.match.params.id;
-			values.timestamp = Date.now();
 			this.props.editPost(values);
 		} else {
 			const uiud = GenerateUniqueID(10);

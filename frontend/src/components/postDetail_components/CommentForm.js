@@ -13,8 +13,6 @@ import PropTypes from 'prop-types';
 
 class CommentForm extends Component {
 	static propTypes = {
-		parentId: PropTypes.string.isRequired,
-		commentId: PropTypes.string.isRequired,
 		close: PropTypes.func.isRequired
 	};
 	renderField = field => {

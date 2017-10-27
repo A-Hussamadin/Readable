@@ -17,8 +17,7 @@ import Breadcrumb from './shared_components/Breadcrumb';
 class PostDetails extends Component {
 	state = {
 		modalOpen: false,
-		commentToEdit: null,
-		postId: null
+		commentToEdit: null
 	};
 
 	openModal = () => {
@@ -37,10 +36,6 @@ class PostDetails extends Component {
 		const id = this.props.match.params.id;
 		if (id) {
 			this.props.postDetails(id);
-			this.setState(() => ({
-				postId: id
-			}));
-			//this.props.postComments(id);
 		}
 	}
 
@@ -159,7 +154,7 @@ class PostDetails extends Component {
 
 						<div className="row comments-panel">
 							<CommentsPanel
-								parentId={this.state.postId}
+								parentId={post.id}
 								editComment={this.openEditModal}
 							/>
 						</div>
@@ -173,7 +168,7 @@ class PostDetails extends Component {
 							>
 								<div className="card-form">
 									<CommentForm
-										parentId={this.state.postId}
+										parentId={post.id}
 										commentId={this.state.commentToEdit}
 										close={this.closeModal}
 									/>
